@@ -1,0 +1,5 @@
+- [/starting](starting/)
+- [/countdown](countdown/)
+- [/countdown-5mins](countdown#5)
+- [/brb](brb/)
+- [/thanks](thanks/)
