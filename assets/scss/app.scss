@@ -37,6 +37,14 @@ body {
 	width: 50%;
 }
 
+.flex > aside.full {
+	width: 100%;
+}
+
+.flex > aside.full .logo {
+	width: 800px;
+}
+
 .flex > main {
 	width: 50%;
 	background-color: white;
