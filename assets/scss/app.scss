@@ -56,6 +56,29 @@ body {
 	display: block;
 }
 
+.lunch {
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	margin-top: 6rem;
+}
+
+.lunch img {
+	background: #BD0020;
+	max-width: 400px;
+	padding: 2rem 3rem;
+	margin-left: 2rem;
+}
+
+.lunch-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 .gradient {
 	animation: animateBg 15s linear infinite alternate;
 	background-image: linear-gradient(0deg, #e9b840, #63d56e, #3964e9, #df3755);
