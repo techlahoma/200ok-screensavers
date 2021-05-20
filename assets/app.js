@@ -1,6 +1,6 @@
 	(function() {
 		// all your code here
-		var countDownDate = new Date("Feb 5, 2021 9:00:00").getTime();
+		var countDownDate = new Date("May 22, 2021 9:00:00").getTime();
 		var dateNow = new Date().getTime();
 		var wellBeText = "We'll be starting in ";
 
@@ -14,8 +14,6 @@
 			countDownDate = addMinutes(dateNow, hash)
 			wellBeText = "We'll be back in ";
 		}
-
-
 
 		// Update the count down every 1 second
 		var x = setInterval(function() {
@@ -39,12 +37,14 @@
 			}
 
 			// Display the result in the element with id="demo"
-			document.getElementById("timer").innerHTML = wellBeText + minutes + ":" + seconds;
+			document.getElementById("text").innerHTML = wellBeText;
+			document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 
 			// If the count down is finished, write some text
 			if (distance < 0) {
 				clearInterval(x);
-				document.getElementById("timer").innerHTML = "We're starting now!";
+				document.getElementById("text").innerHTML = "We're starting now!";
+				document.getElementById("timer").style.display = "none";
 			}
 		}, 1000);
 
