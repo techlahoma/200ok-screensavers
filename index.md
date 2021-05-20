@@ -3,3 +3,4 @@
 - [/countdown-5mins](countdown#5)
 - [/brb](brb/)
 - [/thanks](thanks/)
+- [/lunch](lunch/)
