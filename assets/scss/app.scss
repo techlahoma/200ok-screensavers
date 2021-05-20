@@ -164,7 +164,7 @@ h2 {
 	
 	.particle:nth-child(#{$i}){
 		animation: particle-animation-#{$i} 60s infinite;
-		$size: random(5) + 5 + px;
+		$size: random(24) + 12 + px;
 		opacity: random(100)/100;
 		height: $size;
 		width: $size;
