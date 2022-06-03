@@ -29,7 +29,7 @@ body {
 }
 
 .flex > aside {
-	background: #4D2462;
+	background: #F3C371;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -57,19 +57,27 @@ body {
 }
 
 .lunch {
-	color: white;
+	// color: white;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	font-size: 3rem;
-	margin-top: 6rem;
+	// margin-top: 6rem;
+	gap: 2rem;
+}
+
+.lunch small {
+	font-size: 2rem;
+	color: #B55346;
+	display: block;
+	line-height: 2.5rem;
 }
 
 .lunch img {
-	background: #BD0020;
-	max-width: 400px;
-	padding: 2rem 3rem;
-	margin-left: 2rem;
+	// background: #BD0020;
+	max-width: 350px;
+	// padding: 2rem 3rem;
 }
 
 .lunch-block {
@@ -161,16 +169,21 @@ h2 {
 	/* background: rgba(255,255,255,0.25); */
 	margin-top: 4rem;
 	/* padding-top: 2rem; */
-	color: #4D2462;
+	color: #6D5221;
 	/* padding: 1rem 1.5rem; */
 	font-family: 'Spartan', sans-serif;
 	/* outline: 8px solid rgba(255,255,255,0.25);
   outline-offset: 8px; */
 
+	span {
+		color: #B55346;
+	}
+
 }
 
 #timer {
-	background-color: #F27E5B;
+	
+	background-color: #B55346;
 	margin-top: 1rem;
 	color: white;
 	padding: .5rem 1.5rem .25rem;
@@ -207,12 +220,13 @@ h2 {
 	
 	.particle:nth-child(#{$i}){
 		animation: particle-animation-#{$i} 60s infinite;
-		$size: random(24) + 12 + px;
-		opacity: random(100)/100;
+		$size: random(15) + 12 + px;
+		opacity: random(50)/100;
 		height: $size;
 		width: $size;
 		animation-delay: -$i * .2s;
 		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
-		background: hsl(random(360), 70%, 50%);
+		// background: hsl(random(360), 70%, 50%);
+		background: white;
 	}
 }
