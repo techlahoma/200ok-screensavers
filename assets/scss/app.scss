@@ -1,5 +1,14 @@
 // sass --watch assets/scss/app.scss:assets/app.css
 
+$twoOhKay-white: #FAFAF9;
+$twoOhKay-black: #1c1917;
+$twoOhKay-red: #EF493C;
+$twoOhKay-blue: #3281C4;
+
+$twoOhKay-crimson: 'Crimson Text', serif;
+$twoOhKay-leagueGothic: 'League Gothic', sans-serif;
+$twoOhKay-shareTechMono: 'Share Tech Mono', monospace;
+
 html {
 	box-sizing: border-box;
 }
@@ -17,10 +26,13 @@ body {
 	/* background: url(gray-wallpaper.jpg) center center no-repeat;
 	background-size: cover; */
 	min-height: 100vh;
-	font-family: 'Spartan', sans-serif;
+	font-family: $twoOhKay-leagueGothic;
+	text-transform: uppercase;
+	font-weight: 400;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	background-color: $twoOhKay-white;
 }
 
 .flex {
@@ -29,7 +41,7 @@ body {
 }
 
 .flex > aside {
-	background: #F3C371;
+	background: $twoOhKay-black;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -47,7 +59,7 @@ body {
 
 .flex > main {
 	width: 50%;
-	background-color: white;
+	
 }
 
 .logo {
@@ -69,7 +81,7 @@ body {
 
 .lunch small {
 	font-size: 2rem;
-	color: #B55346;
+	color: $twoOhKay-black;
 	display: block;
 	line-height: 2.5rem;
 }
@@ -164,34 +176,36 @@ body {
 h2 {
 	text-align: center;
 	display: block;
-	font-size: 4em;
+	font-size: 6rem;
+	line-height: 0.9;
 	width: 100%;
 	/* background: rgba(255,255,255,0.25); */
 	margin-top: 4rem;
 	/* padding-top: 2rem; */
-	color: #6D5221;
+	color: $twoOhKay-black;
 	/* padding: 1rem 1.5rem; */
-	font-family: 'Spartan', sans-serif;
+	font-family: $twoOhKay-leagueGothic;
+	text-transform: uppercase;
+	font-weight: 400;
 	/* outline: 8px solid rgba(255,255,255,0.25);
   outline-offset: 8px; */
 
 	span {
-		color: #B55346;
+		color: $twoOhKay-black;
 	}
 
 }
 
 #timer {
 	
-	background-color: #B55346;
+	background-color: $twoOhKay-red;
 	margin-top: 1rem;
-	color: white;
+	color: $twoOhKay-white;
 	padding: .5rem 1.5rem .25rem;
 	line-height: normal;
 	display: inline-block;
 	font-size: 6rem;
-	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-
+	font-family: $twoOhKay-shareTechMono;
 }
 
 /* .spacer {
@@ -221,12 +235,13 @@ h2 {
 	.particle:nth-child(#{$i}){
 		animation: particle-animation-#{$i} 60s infinite;
 		$size: random(15) + 12 + px;
-		opacity: random(50)/100;
+		opacity: calc(random(50) / 100);
 		height: $size;
 		width: $size;
 		animation-delay: -$i * .2s;
 		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
-		// background: hsl(random(360), 70%, 50%);
-		background: white;
+		background: hsl(random(360), 70%, 50%);
+		// background: white;
+
 	}
 }
