@@ -4,3 +4,4 @@
 - [/brb](brb/)
 - [/thanks](thanks/)
 - [/lunch](lunch/)
+- [/logo](logo/)

@@ -1,13 +1,30 @@
 // sass --watch assets/scss/app.scss:assets/app.css
 
-$twoOhKay-white: #FAFAF9;
+$twoOhKay-white: #f8e6cf;
 $twoOhKay-black: #1c1917;
+$twoOhKay-black-lighter: #484540;
 $twoOhKay-red: #EF493C;
 $twoOhKay-blue: #3281C4;
 
+
 $twoOhKay-crimson: 'Crimson Text', serif;
-$twoOhKay-leagueGothic: 'League Gothic', sans-serif;
-$twoOhKay-shareTechMono: 'Share Tech Mono', monospace;
+
+// .caprasimo-regular {
+// 	font-family: "Caprasimo", serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+
+// .shrikhand-regular {
+// 	font-family: "Shrikhand", serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+
+// $twoOhKay-leagueGothic: 'League Gothic', sans-serif;
+// $twoOhKay-shareTechMono: 'Share Tech Mono', monospace;
+$twoOhKay-leagueGothic: 'Caprasimo', sans-serif;
+$twoOhKay-shareTechMono: 'Caprasimo', monospace;
 
 html {
 	box-sizing: border-box;
@@ -33,33 +50,62 @@ body {
 	padding: 0;
 	overflow: hidden;
 	background-color: $twoOhKay-white;
+	text-align: center;
 }
 
 .flex {
 	display: flex;
 	align-items: center;
+	
 }
 
-.flex > aside {
+
+.flex > aside, .flex > div {
 	background: $twoOhKay-black;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	padding: 0 2rem;
 	width: 50%;
+	border-radius: 40px;
 }
 
-.flex > aside.full {
+.flex>div {
+	padding: 40px;
+	background-color: transparent;
+	// border: 1px solid blue;
+
+	&.full {
+		width: 100%;
+	}
+	
+}
+
+.flex > div > aside {
+	padding: 40px;
+	background: $twoOhKay-black;
+	border-radius: 40px;
+	min-height: calc(100vh - 80px);
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+
+	&.full {
+		width: 100%;
+	}
+}
+
+.flex aside.full {
 	width: 100%;
 }
 
-.flex > aside.full .logo {
+.flex aside.full .logo {
 	width: 800px;
 }
 
-.flex > main {
+.flex main {
 	width: 50%;
-	
+	// border: 1px solid red;
 }
 
 .logo {
@@ -67,6 +113,30 @@ body {
 	margin: 0 auto 0;
 	display: block;
 }
+
+.double {
+	> div {
+		width: 100%;
+		// border: 1px solid green;
+	}
+	div > aside {
+		border-radius: 40px 0 0 40px;
+		width: 100;
+		// border: 1px solid pink;
+		width: 50%;
+	}
+	main {
+		background: $twoOhKay-black-lighter;
+		color: $twoOhKay-white;
+		min-height: calc(100vh - 80px);
+		border-radius: 0 40px 40px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+	}
+}
+
 
 .lunch {
 	// color: white;
@@ -176,13 +246,13 @@ body {
 h2 {
 	text-align: center;
 	display: block;
-	font-size: 6rem;
+	font-size: 5rem;
 	line-height: 0.9;
 	width: 100%;
 	/* background: rgba(255,255,255,0.25); */
 	margin-top: 4rem;
 	/* padding-top: 2rem; */
-	color: $twoOhKay-black;
+		
 	/* padding: 1rem 1.5rem; */
 	font-family: $twoOhKay-leagueGothic;
 	text-transform: uppercase;
@@ -191,7 +261,9 @@ h2 {
   outline-offset: 8px; */
 
 	span {
-		color: $twoOhKay-black;
+		// color: $twoOhKay-black;
+
+		color: $twoOhKay-white;
 	}
 
 }
@@ -201,11 +273,12 @@ h2 {
 	background-color: $twoOhKay-red;
 	margin-top: 1rem;
 	color: $twoOhKay-white;
-	padding: .5rem 1.5rem .25rem;
+	padding: .5rem 2rem .75rem;
 	line-height: normal;
 	display: inline-block;
 	font-size: 6rem;
 	font-family: $twoOhKay-shareTechMono;
+	border-radius: 4rem;
 }
 
 /* .spacer {
@@ -240,7 +313,7 @@ h2 {
 		width: $size;
 		animation-delay: -$i * .2s;
 		transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
-		background: hsl(random(360), 70%, 50%);
+		background: hsl(random(360), 10%, 50%);
 		// background: white;
 
 	}

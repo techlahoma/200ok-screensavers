@@ -1,8 +1,8 @@
 	(function() {
 		// all your code here
-		var countDownDate = new Date("May 12, 2023 9:00:00").getTime();
+		var countDownDate = new Date("May 17, 2024 9:00:00").getTime();
 		var dateNow = new Date().getTime();
-		var wellBeText = "We'll be starting in ";
+		var wellBeText = "We'll be starting&nbsp;in ";
 
 		function addMinutes(date, minutes) {
 			return new Date(date + minutes * 60000);
@@ -12,7 +12,7 @@
 			console.log(dateNow);
 			var hash = location.hash.substr(1);
 			countDownDate = addMinutes(dateNow, hash)
-			wellBeText = "We'll be back in ";
+			wellBeText = `We'll be <br> back in `;
 		}
 
 		// Update the count down every 1 second
